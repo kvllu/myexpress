@@ -2,6 +2,7 @@ const db = require('../database');
 
 const book = {
   get: function(callback) {
+    console.log("vaarassa tiedostossa");
     return db.query('select * from book order by id_book desc', callback);
   },
   getById: function(id, callback) {
